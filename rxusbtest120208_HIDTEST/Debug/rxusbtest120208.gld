@@ -1,0 +1,8 @@
+-T "C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208_Debug_auto.gsi"
+-T "C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208_input.tmp" 
+-L "c:\program files\renesas\hew\tools\kpit cummins\gnurx-elf\v11.03\rx-elf\lib\gcc\rx-elf\4.5-GNURX_v11.03"
+-L "C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug"
+-Map "C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.map"
+--start-group -l "gcc" -l "rxusbtest120208" --end-group
+-o "C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.x"
+-e _PowerON_Reset

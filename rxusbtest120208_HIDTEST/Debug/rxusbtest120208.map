@@ -1,0 +1,698 @@
+
+Allocating common symbols
+Common symbol       size              file
+
+pipe2BufCnt         0x2               C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
+dcpBufCnt           0x2               C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
+wIndex              0x2               C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+p_pipe2Buf          0x4               C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
+wLength             0x2               C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+bRequest            0x2               C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+bmRequestType       0x2               C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+p_dcpBuf            0x4               C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
+wValue              0x2               C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.fvectors       0xffffffa0       0x60
+ *(.fvectors)
+ .fvectors      0xffffffa0       0x60 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\vector_table.o
+                0xffffffa0                HardwareVectors
+
+.text           0xfffc0000     0x1b48
+ *(.text)
+ .text          0xfffc0000       0x6e C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\reset_program.o
+                0xfffc0000                PowerON_Reset
+ *(.text.*)
+ *(P)
+ P              0xfffc006e        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\vector_table.o
+ *fill*         0xfffc006e        0x2 00
+ P              0xfffc0070      0x1d0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
+                0xfffc0070                WriteControlINPacket
+                0xfffc0137                WriteBulkInPacket
+ P              0xfffc0240       0x48 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBStandardRequestProcess.o
+                0xfffc0240                GetStatus
+                0xfffc0248                ClearFeature
+                0xfffc0250                SetFeature
+                0xfffc0258                SetAddress
+                0xfffc0260                SetDescriptor
+                0xfffc0268                GetConfiguration
+                0xfffc0270                GetInterface
+                0xfffc0278                SetInterface
+                0xfffc0280                SynchFrame
+ P              0xfffc0288      0x358 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
+                0xfffc0402                HandleBRDY
+                0xfffc048b                HandleBEMP
+                0xfffc04ed                USBInterruptHandler
+ P              0xfffc05e0      0x1e8 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
+                0xfffc05e0                GetDeviceDescriptor
+                0xfffc0611                GetConfigurationDescriptor
+                0xfffc0642                GetStringDescriptor
+                0xfffc0769                GetDescriptor
+ P              0xfffc07c8        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBDescriptors.o
+ P              0xfffc07c8      0x140 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
+                0xfffc07c8                ControlWriteStatusStage
+ P              0xfffc0908      0x230 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
+                0xfffc0908                SetConfiguration
+                0xfffc09ab                ControlWriteNoDataStage
+ P              0xfffc0b38      0x1b8 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
+                0xfffc0b38                ControlWriteDataStage
+ P              0xfffc0cf0      0x170 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
+                0xfffc0cf0                ControlReadStatusStage
+ P              0xfffc0e60      0x160 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+                0xfffc0e60                ControlReadDataStage
+ P              0xfffc0fc0      0x400 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
+                0xfffc0fc0                SetDefaultInterrupts
+                0xfffc103c                HW_Init
+                0xfffc10c9                clockConfiguration
+                0xfffc10f0                moduleEnable
+                0xfffc1104                portSetup
+                0xfffc112c                usbModuleSetup
+                0xfffc115f                usbPipeSetup
+                0xfffc1297                usbInterruptSetup
+                0xfffc12f0                irqConfiguration
+                0xfffc1342                ledOn
+                0xfffc1356                ledOff
+                0xfffc136a                main
+ P              0xfffc13c0        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\reset_program.o
+ P              0xfffc13c0      0x54c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
+                0xfffc13c0                INT_Excep_SuperVisorInst
+                0xfffc13c8                INT_Excep_UndefinedInst
+                0xfffc13d0                INT_Excep_FloatingPoint
+                0xfffc13d8                INT_NonMaskableInterrupt
+                0xfffc13e0                Dummy
+                0xfffc13e8                INT_Excep_BRK
+                0xfffc13f0                INT_Excep_BUSERR
+                0xfffc13f8                INT_Excep_FCU_FCUERR
+                0xfffc1400                INT_Excep_FCU_FRDYI
+                0xfffc1408                INT_Excep_ICU_SWINT
+                0xfffc1410                INT_Excep_CMTU0_CMI0
+                0xfffc1418                INT_Excep_CMTU0_CMI1
+                0xfffc1420                INT_Excep_CMTU1_CMI2
+                0xfffc1428                INT_Excep_CMTU1_CMI3
+                0xfffc1430                INT_Excep_ETHER_EINT
+                0xfffc1438                INT_Excep_USB0_D0FIFO0
+                0xfffc1440                INT_Excep_USB0_D1FIFO0
+                0xfffc1448                INT_Excep_USB0_USBI0
+                0xfffc1454                INT_Excep_USB1_D0FIFO1
+                0xfffc145c                INT_Excep_USB1_D1FIFO1
+                0xfffc1464                INT_Excep_USB1_USBI1
+                0xfffc146c                INT_Excep_RSPI0_SPEIO
+                0xfffc1474                INT_Excep_RSPI0_SPRI0
+                0xfffc147c                INT_Excep_RSPI0_SPTI0
+                0xfffc1484                INT_Excep_RSPI0_SPII0
+                0xfffc148c                INT_Excep_RSPI1_SPEI1
+                0xfffc1494                INT_Excep_RSPI1_SPRI1
+                0xfffc149c                INT_Excep_RSPI1_SPTI1
+                0xfffc14a4                INT_Excep_RSPI1_SPII1
+                0xfffc14ac                INT_Excep_CAN0_ERS0
+                0xfffc14b4                INT_Excep_CAN0_RXF0
+                0xfffc14bc                INT_Excep_CAN0_TXF0
+                0xfffc14c4                INT_Excep_CAN0_RXM0
+                0xfffc14cc                INT_Excep_CAN0_TXM0
+                0xfffc14d4                INT_Excep_RTC_PRD
+                0xfffc14dc                INT_Excep_RTC_CUP
+                0xfffc14e4                INT_Excep_IRQ0
+                0xfffc14ec                INT_Excep_IRQ1
+                0xfffc14f4                INT_Excep_IRQ2
+                0xfffc14fc                INT_Excep_IRQ3
+                0xfffc1504                INT_Excep_IRQ4
+                0xfffc150c                INT_Excep_IRQ5
+                0xfffc1514                INT_Excep_IRQ6
+                0xfffc151c                INT_Excep_IRQ7
+                0xfffc1524                INT_Excep_IRQ8
+                0xfffc152c                INT_Excep_IRQ9
+                0xfffc1534                INT_Excep_IRQ10
+                0xfffc153c                INT_Excep_IRQ11
+                0xfffc1544                INT_Excep_IRQ12
+                0xfffc154c                INT_Excep_IRQ13
+                0xfffc1554                INT_Excep_IRQ14
+                0xfffc155c                INT_Excep_IRQ15
+                0xfffc1564                INT_Excep_USBR_USBR0
+                0xfffc156c                INT_Excep_USBR_USBR1
+                0xfffc1574                INT_Excep_RTC_ALM
+                0xfffc157c                INT_Excep_WDT_WOVI
+                0xfffc1584                INT_Excep_AD0_ADI0
+                0xfffc158c                INT_Excep_AD1_ADI1
+                0xfffc1594                INT_Excep_S12AD_ADI12_0
+                0xfffc159c                INT_Excep_MTU0_TGIA0
+                0xfffc15a4                INT_Excep_MTU0_TGIB0
+                0xfffc15ac                INT_Excep_MTU0_TGICO
+                0xfffc15b4                INT_Excep_MTU0_TGID0
+                0xfffc15bc                INT_Excep_MTU0_TCIV0
+                0xfffc15c4                INT_Excep_MTU0_TGIE0
+                0xfffc15cc                INT_Excep_MTU0_TGIF0
+                0xfffc15d4                INT_Excep_MTU1_TGIA1
+                0xfffc15dc                INT_Excep_MTU1_TGIB1
+                0xfffc15e4                INT_Excep_MTU1_TCIV1
+                0xfffc15ec                INT_Excep_MTU1_TCIU1
+                0xfffc15f4                INT_Excep_MTU2_TGIA2
+                0xfffc15fc                INT_Excep_MTU2_TGIB2
+                0xfffc1604                INT_Excep_MTU2_TCIV2
+                0xfffc160c                INT_Excep_MTU2_TCIU2
+                0xfffc1614                INT_Excep_MTU3_TGIA3
+                0xfffc161c                INT_Excep_MTU3_TGIB3
+                0xfffc1624                INT_Excep_MTU3_TGIC3
+                0xfffc162c                INT_Excep_MTU3_TGID3
+                0xfffc1634                INT_Excep_MTU3_TCIV3
+                0xfffc163c                INT_Excep_MTU4_TGIA4
+                0xfffc1644                INT_Excep_MTU4_TGIB4
+                0xfffc164c                INT_Excep_MTU4_TGIC4
+                0xfffc1654                INT_Excep_MTU4_TGID4
+                0xfffc165c                INT_Excep_MTU4_TCIV4
+                0xfffc1664                INT_Excep_MTU5_TGIU5
+                0xfffc166c                INT_Excep_MTU5_TGIV5
+                0xfffc1674                INT_Excep_MTU5_TGIW5
+                0xfffc167c                INT_Excep_MTU6_TGIA6
+                0xfffc1684                INT_Excep_MTU6_TGIB6
+                0xfffc168c                INT_Excep_MTU6_TGIC6
+                0xfffc1694                INT_Excep_MTU6_TGID6
+                0xfffc169c                INT_Excep_MTU6_TCIV6
+                0xfffc16a4                INT_Excep_MTU6_TGIE6
+                0xfffc16ac                INT_Excep_MTU6_TGIF6
+                0xfffc16b4                INT_Excep_MTU7_TGIA7
+                0xfffc16bc                INT_Excep_MTU7_TGIB7
+                0xfffc16c4                INT_Excep_MTU7_TCIV7
+                0xfffc16cc                INT_Excep_MTU7_TCIU7
+                0xfffc16d4                INT_Excep_MTU8_TGIA8
+                0xfffc16dc                INT_Excep_MTU8_TGIB8
+                0xfffc16e4                INT_Excep_MTU8_TCIV8
+                0xfffc16ec                INT_Excep_MTU8_TCIU8
+                0xfffc16f4                INT_Excep_MTU9_TGIA9
+                0xfffc16fc                INT_Excep_MTU9_TGIB9
+                0xfffc1704                INT_Excep_MTU9_TGIC9
+                0xfffc170c                INT_Excep_MTU9_TGID9
+                0xfffc1714                INT_Excep_MTU9_TCIV9
+                0xfffc171c                INT_Excep_MTU10_TGIA10
+                0xfffc1724                INT_Excep_MTU10_TGIB10
+                0xfffc172c                INT_Excep_MTU10_TGIC10
+                0xfffc1734                INT_Excep_MTU10_TGID10
+                0xfffc173c                INT_Excep_MTU10_TCIV10
+                0xfffc1744                INT_Excep_MTU11_TGIU11
+                0xfffc174c                INT_Excep_MTU11_TGIV11
+                0xfffc1754                INT_Excep_MTU11_TGIW11
+                0xfffc175c                INT_Excep_POE_OEI1
+                0xfffc1764                INT_Excep_POE_OEI2
+                0xfffc176c                INT_Excep_POE_OEI3
+                0xfffc1774                INT_Excep_POE_OEI4
+                0xfffc177c                INT_Excep_TMR0_CMIA0
+                0xfffc1784                INT_Excep_TMR0_CMIB0
+                0xfffc178c                INT_Excep_TMR0_OVI0
+                0xfffc1794                INT_Excep_TMR1_CMIA1
+                0xfffc179c                INT_Excep_TMR1_CMIB1
+                0xfffc17a4                INT_Excep_TMR1_OVI1
+                0xfffc17ac                INT_Excep_TMR2_CMIA2
+                0xfffc17b4                INT_Excep_TMR2_CMIB2
+                0xfffc17bc                INT_Excep_TMR2_OVI2
+                0xfffc17c4                INT_Excep_TMR3_CMIA3
+                0xfffc17cc                INT_Excep_TMR3_CMIB3
+                0xfffc17d4                INT_Excep_TMR3_OVI3
+                0xfffc17dc                INT_Excep_DMACA_DMAC0I
+                0xfffc17e4                INT_Excep_DMACA_DMAC1I
+                0xfffc17ec                INT_Excep_DMACA_DMAC2I
+                0xfffc17f4                INT_Excep_DMACA_DMAC3I
+                0xfffc17fc                INT_Excep_EXDMAC_EXDMAC_0I
+                0xfffc1804                INT_Excep_EXDMAC_EXDMAC_1I
+                0xfffc180c                INT_Excep_SCI0_ERI0
+                0xfffc1814                INT_Excep_SCI0_RXI0
+                0xfffc181c                INT_Excep_SCI0_TXI0
+                0xfffc1824                INT_Excep_SCI0_TEI0
+                0xfffc182c                INT_Excep_SCI1_ERI1
+                0xfffc1834                INT_Excep_SCI1_RXI1
+                0xfffc183c                INT_Excep_SCI1_TXI1
+                0xfffc1844                INT_Excep_SCI1_TEI1
+                0xfffc184c                INT_Excep_SCI2_ERI2
+                0xfffc1854                INT_Excep_SCI2_RXI2
+                0xfffc185c                INT_Excep_SCI2_TXI2
+                0xfffc1864                INT_Excep_SCI2_TEI2
+                0xfffc186c                INT_Excep_SCI3_ERI3
+                0xfffc1874                INT_Excep_SCI3_RXI3
+                0xfffc187c                INT_Excep_SCI3_TXI3
+                0xfffc1884                INT_Excep_SCI3_TEI3
+                0xfffc188c                INT_Excep_SCI5_ERI5
+                0xfffc1894                INT_Excep_SCI5_RXI5
+                0xfffc189c                INT_Excep_SCI5_TXI5
+                0xfffc18a4                INT_Excep_SCI5_TEI5
+                0xfffc18ac                INT_Excep_SCI6_ERI6
+                0xfffc18b4                INT_Excep_SCI6_RXI6
+                0xfffc18bc                INT_Excep_SCI6_TXI6
+                0xfffc18c4                INT_Excep_SCI6_TEI6
+                0xfffc18cc                INT_Excep_RIIC0_ICEEI0
+                0xfffc18d4                INT_Excep_RIIC0_ICRXI0
+                0xfffc18dc                INT_Excep_RIIC0_ICTXI0
+                0xfffc18e4                INT_Excep_RIIC0_ICTEI0
+                0xfffc18ec                INT_Excep_RIIC1_ICEEI1
+                0xfffc18f4                INT_Excep_RIIC1_ICRXI1
+                0xfffc18fc                INT_Excep_RIIC1_ICTXI1
+                0xfffc1904                INT_Excep_RIIC1_ICTEI1
+ P              0xfffc190c        0x7 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
+                0xfffc190c                HardwareSetup
+ *fill*         0xfffc1913        0x5 00
+ P              0xfffc1918      0x230 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
+                0xfffc1918                DEBUGFIFO_Init
+                0xfffc193d                DEBUGFIFO_OutChar
+                0xfffc1987                DEBUGFIFO_OutString
+                0xfffc19af                DEBUGFIFO_OutLine
+                0xfffc19e3                DEBUGFIFO_OutNibble
+                0xfffc1aa7                DEBUGFIFO_OutByte
+                0xfffc1ad4                DEBUGFIFO_OutWord
+                0xfffc1aff                DEBUGFIFO_OutByteValue
+                0xfffc1b23                DEBUGFIFO_OutWordValue
+                0xfffc1b48                etext = .
+
+.rvectors       0xfffc1b48      0x400
+                0xfffc1b48                _rvectors_start = .
+ *(.rvectors)
+ .rvectors      0xfffc1b48      0x400 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\vector_table.o
+                0xfffc1b48                RelocatableVectors
+                0xfffc1f48                _rvectors_end = .
+
+.init           0xfffc1f48        0x0
+ *(.init)
+                0xfffc1f48                __preinit_array_start = .
+ *(.preinit_array)
+                0xfffc1f48                __preinit_array_end = .
+                0xfffc1f48                __init_array_start = ((. + 0x3) & 0xfffffffc)
+ *(.init_array)
+ *(SORT(.init_array.*))
+                0xfffc1f48                __init_array_end = .
+                0xfffc1f48                __fini_array_start = .
+ *(.fini_array)
+ *(SORT(.fini_array.*))
+                0xfffc1f48                __fini_array_end = .
+
+.fini
+ *(.fini)
+
+.got
+ *(.got)
+ *(.got.plt)
+
+.rodata         0xfffc1f48      0x4f4
+ *(.rodata)
+ *(.rodata.*)
+ *(C_1)
+ *(C_2)
+ *(C)
+ C              0xfffc1f48      0x1d8 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
+ C              0xfffc2120       0x70 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
+ C              0xfffc2190       0x58 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
+ C              0xfffc21e8       0x6c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
+ C              0xfffc2254       0x84 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
+ C              0xfffc22d8       0x58 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
+ C              0xfffc2330       0x8c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+ C              0xfffc23bc       0x3c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
+ C              0xfffc23f8       0x44 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
+                0xfffc243c                _erodata = .
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.jcr
+ *(.jcr)
+
+.tors           0xfffc243c        0x0
+                0xfffc243c                __CTOR_LIST__ = .
+                0xfffc243c                ___ctors = .
+ *(.ctors)
+                0xfffc243c                ___ctors_end = .
+                0xfffc243c                __CTOR_END__ = .
+                0xfffc243c                __DTOR_LIST__ = .
+                0xfffc243c                ___dtors = .
+ *(.dtors)
+                0xfffc243c                ___dtors_end = .
+                0xfffc243c                __DTOR_END__ = .
+                0xfffc243c                _mdata = .
+
+.istack         0x00001808        0x0
+                0x00001808                _istack = .
+
+.ustack         0x00001708        0x0
+                0x00001708                _ustack = .
+
+.data           0x00001001       0xe7 load address 0xfffc243c
+                0x00001001                _data = .
+ *(.data)
+ *(.data.*)
+ *(D)
+ *fill*         0x00001001        0x3 00
+ D              0x00001004       0xe4 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBDescriptors.o
+                0x00001004                usb_gpcdc_DeviceDescriptorLength
+                0x00001006                usb_gpcdc_DeviceDescriptor
+                0x00001018                usb_gpcdc_ConfigrationDescriptorLength
+                0x0000101a                usb_gpcdc_ConfigrationDescriptor
+                0x00001044                usb_gpcdc_StringDescriptor0
+                0x00001048                usb_gpcdc_StringDescriptor1
+                0x00001058                usb_gpcdc_StringDescriptor2
+                0x00001084                usb_gpcdc_StringDescriptor3
+                0x0000108c                usb_gpcdc_StringDescriptor4
+                0x000010a2                usb_gpcdc_StringDescriptor5
+                0x000010c2                usb_gpcdc_StringDescriptor6
+                0x000010d4                usb_gpcdc_StringDescriptor7
+ *(D_1)
+ D_1            0x000010e8        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\vector_table.o
+ D_1            0x000010e8        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
+ D_1            0x000010e8        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBStandardRequestProcess.o
+ D_1            0x000010e8        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
+ D_1            0x000010e8        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
+ D_1            0x000010e8        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBDescriptors.o
+ D_1            0x000010e8        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
+ D_1            0x000010e8        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
+ D_1            0x000010e8        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
+ D_1            0x000010e8        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
+ D_1            0x000010e8        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+ D_1            0x000010e8        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
+ D_1            0x000010e8        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\reset_program.o
+ D_1            0x000010e8        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
+ D_1            0x000010e8        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
+ D_1            0x000010e8        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
+ *(D_2)
+                0x000010e8                _edata = .
+
+.gcc_exc
+ *(.gcc_exc)
+
+.bss            0x000010e8       0x16 load address 0xfffc2524
+                0x000010e8                _bss = .
+ *(.bss)
+ *(.bss.*)
+ *(COMMON)
+ COMMON         0x000010e8        0xc C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
+                0x000010e8                pipe2BufCnt
+                0x000010ea                dcpBufCnt
+                0x000010ec                p_pipe2Buf
+                0x000010f0                p_dcpBuf
+ COMMON         0x000010f4        0xa C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+                0x000010f4                wIndex
+                0x000010f6                wLength
+                0x000010f8                bRequest
+                0x000010fa                bmRequestType
+                0x000010fc                wValue
+ *(B)
+ *(B_1)
+ B_1            0x000010fe        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\vector_table.o
+ B_1            0x000010fe        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
+ B_1            0x000010fe        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBStandardRequestProcess.o
+ B_1            0x000010fe        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
+ B_1            0x000010fe        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
+ B_1            0x000010fe        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBDescriptors.o
+ B_1            0x000010fe        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
+ B_1            0x000010fe        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
+ B_1            0x000010fe        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
+ B_1            0x000010fe        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
+ B_1            0x000010fe        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+ B_1            0x000010fe        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
+ B_1            0x000010fe        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\reset_program.o
+ B_1            0x000010fe        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
+ B_1            0x000010fe        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
+ B_1            0x000010fe        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
+ *(B_2)
+                0x000010fe                _ebss = .
+                0x000010fe                _end = .
+LOAD C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\vector_table.o
+LOAD C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
+LOAD C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBStandardRequestProcess.o
+LOAD C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
+LOAD C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
+LOAD C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBDescriptors.o
+LOAD C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
+LOAD C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
+LOAD C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
+LOAD C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
+LOAD C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+LOAD C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
+LOAD C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\reset_program.o
+LOAD C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
+LOAD C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
+LOAD C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
+START GROUP
+LOAD c:\program files\renesas\hew\tools\kpit cummins\gnurx-elf\v11.03\rx-elf\lib\gcc\rx-elf\4.5-GNURX_v11.03\libgcc.a
+LOAD C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\librxusbtest120208.a
+END GROUP
+OUTPUT(C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.x elf32-rx-le)
+
+.debug_abbrev   0x00000000      0xc4b
+ .debug_abbrev  0x00000000       0x69 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\vector_table.o
+ .debug_abbrev  0x00000069      0x10b C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
+ .debug_abbrev  0x00000174       0x43 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBStandardRequestProcess.o
+ .debug_abbrev  0x000001b7      0x178 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
+ .debug_abbrev  0x0000032f      0x112 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
+ .debug_abbrev  0x00000441       0x40 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBDescriptors.o
+ .debug_abbrev  0x00000481       0xe0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
+ .debug_abbrev  0x00000561       0xe0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
+ .debug_abbrev  0x00000641       0xfa C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
+ .debug_abbrev  0x0000073b       0xe0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
+ .debug_abbrev  0x0000081b      0x130 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+ .debug_abbrev  0x0000094b      0x171 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
+ .debug_abbrev  0x00000abc       0x14 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\reset_program.o
+ .debug_abbrev  0x00000ad0       0x3c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
+ .debug_abbrev  0x00000b0c       0x32 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
+ .debug_abbrev  0x00000b3e      0x10d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
+
+.debug_info     0x00000000    0x17fb6
+ .debug_info    0x00000000       0x8b C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\vector_table.o
+ .debug_info    0x0000008b     0x2281 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
+ .debug_info    0x0000230c      0x115 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBStandardRequestProcess.o
+ .debug_info    0x00002421     0x22b1 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
+ .debug_info    0x000046d2     0x23c2 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
+ .debug_info    0x00006a94      0x18f C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBDescriptors.o
+ .debug_info    0x00006c23     0x2246 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
+ .debug_info    0x00008e69     0x225b C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
+ .debug_info    0x0000b0c4     0x2263 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
+ .debug_info    0x0000d327     0x2246 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
+ .debug_info    0x0000f56d     0x2342 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+ .debug_info    0x000118af     0x4d5f C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
+ .debug_info    0x0001660e       0xc5 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\reset_program.o
+ .debug_info    0x000166d3      0xe6d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
+ .debug_info    0x00017540       0x53 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
+ .debug_info    0x00017593      0xa23 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
+
+.debug_line     0x00000000      0xf90
+ .debug_line    0x00000000       0x6c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\vector_table.o
+ .debug_line    0x0000006c      0x12d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
+ .debug_line    0x00000199       0xa2 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBStandardRequestProcess.o
+ .debug_line    0x0000023b      0x15f C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
+ .debug_line    0x0000039a      0x110 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
+ .debug_line    0x000004aa       0x6e C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBDescriptors.o
+ .debug_line    0x00000518       0xf3 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
+ .debug_line    0x0000060b      0x118 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
+ .debug_line    0x00000723      0x108 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
+ .debug_line    0x0000082b       0xf9 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
+ .debug_line    0x00000924       0xff C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+ .debug_line    0x00000a23      0x14c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
+ .debug_line    0x00000b6f       0x9e C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\reset_program.o
+ .debug_line    0x00000c0d      0x1e5 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
+ .debug_line    0x00000df2       0x80 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
+ .debug_line    0x00000e72      0x11e C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
+
+.debug_pubnames
+                0x00000000     0x1711
+ .debug_pubnames
+                0x00000000       0x3d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\vector_table.o
+ .debug_pubnames
+                0x0000003d       0x7b C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
+ .debug_pubnames
+                0x000000b8       0xa7 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBStandardRequestProcess.o
+ .debug_pubnames
+                0x0000015f       0x48 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
+ .debug_pubnames
+                0x000001a7       0x73 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
+ .debug_pubnames
+                0x0000021a      0x1a6 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBDescriptors.o
+ .debug_pubnames
+                0x000003c0       0x2e C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
+ .debug_pubnames
+                0x000003ee       0x43 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
+ .debug_pubnames
+                0x00000431       0x2c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
+ .debug_pubnames
+                0x0000045d       0x2d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
+ .debug_pubnames
+                0x0000048a       0x6c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+ .debug_pubnames
+                0x000004f6       0xda C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
+ .debug_pubnames
+                0x000005d0     0x103a C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
+ .debug_pubnames
+                0x0000160a       0x24 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
+ .debug_pubnames
+                0x0000162e       0xe3 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
+
+.debug_pubtypes
+                0x00000000      0x1c3
+ .debug_pubtypes
+                0x00000000       0x19 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\vector_table.o
+ .debug_pubtypes
+                0x00000019       0x1e C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
+ .debug_pubtypes
+                0x00000037       0x12 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBStandardRequestProcess.o
+ .debug_pubtypes
+                0x00000049       0x1e C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
+ .debug_pubtypes
+                0x00000067       0x1e C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
+ .debug_pubtypes
+                0x00000085       0x1e C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
+ .debug_pubtypes
+                0x000000a3       0x1e C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
+ .debug_pubtypes
+                0x000000c1       0x1e C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
+ .debug_pubtypes
+                0x000000df       0x1e C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
+ .debug_pubtypes
+                0x000000fd       0x1e C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+ .debug_pubtypes
+                0x0000011b       0x6a C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
+ .debug_pubtypes
+                0x00000185       0x12 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
+ .debug_pubtypes
+                0x00000197       0x2c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
+
+.debug_str      0x00000000     0x252a
+ .debug_str     0x00000000       0x98 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\vector_table.o
+ .debug_str     0x00000098      0x6a3 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
+                                0x705 (size before relaxing)
+ .debug_str     0x0000073b       0xd8 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBStandardRequestProcess.o
+                                0x127 (size before relaxing)
+ .debug_str     0x00000813       0xde C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
+                                0x748 (size before relaxing)
+ .debug_str     0x000008f1      0x1ed C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
+                                0x86e (size before relaxing)
+ .debug_str     0x00000ade       0x75 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBDescriptors.o
+                                0x1fc (size before relaxing)
+ .debug_str     0x00000b53       0x6a C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
+                                0x6ff (size before relaxing)
+ .debug_str     0x00000bbd       0x83 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
+                                0x710 (size before relaxing)
+ .debug_str     0x00000c40       0x58 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
+                                0x6fb (size before relaxing)
+ .debug_str     0x00000c98       0x70 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
+                                0x6fd (size before relaxing)
+ .debug_str     0x00000d08       0x6c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+                                0x789 (size before relaxing)
+ .debug_str     0x00000d74      0x87c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
+                                0xee8 (size before relaxing)
+ .debug_str     0x000015f0      0xdd6 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
+                                0xded (size before relaxing)
+ .debug_str     0x000023c6       0x5c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
+                                 0xab (size before relaxing)
+ .debug_str     0x00002422      0x108 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
+                                0x161 (size before relaxing)
+
+.comment        0x00000000       0x1c
+ .comment       0x00000000       0x1c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\vector_table.o
+                                 0x1d (size before relaxing)
+ .comment       0x00000000       0x1d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
+ .comment       0x00000000       0x1d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBStandardRequestProcess.o
+ .comment       0x00000000       0x1d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
+ .comment       0x00000000       0x1d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
+ .comment       0x00000000       0x1d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBDescriptors.o
+ .comment       0x00000000       0x1d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
+ .comment       0x00000000       0x1d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
+ .comment       0x00000000       0x1d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
+ .comment       0x00000000       0x1d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
+ .comment       0x00000000       0x1d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+ .comment       0x00000000       0x1d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
+ .comment       0x00000000       0x1d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
+ .comment       0x00000000       0x1d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
+ .comment       0x00000000       0x1d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
+
+.debug_frame    0x00000000     0x175c
+ .debug_frame   0x00000000       0x64 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
+ .debug_frame   0x00000064       0xec C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBStandardRequestProcess.o
+ .debug_frame   0x00000150       0xe8 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
+ .debug_frame   0x00000238       0xa0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
+ .debug_frame   0x000002d8       0x38 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
+ .debug_frame   0x00000310       0x5c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
+ .debug_frame   0x0000036c       0x3c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
+ .debug_frame   0x000003a8       0x38 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
+ .debug_frame   0x000003e0       0x38 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+ .debug_frame   0x00000418      0x1bc C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
+ .debug_frame   0x000005d4     0x1008 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
+ .debug_frame   0x000015dc       0x2c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
+ .debug_frame   0x00001608      0x154 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
+
+.debug_loc      0x00000000     0x265e
+ .debug_loc     0x00000000       0x70 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
+ .debug_loc     0x00000070      0x18c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBStandardRequestProcess.o
+ .debug_loc     0x000001fc      0x12c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
+ .debug_loc     0x00000328       0xbc C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
+ .debug_loc     0x000003e4       0x2c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
+ .debug_loc     0x00000410       0x58 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
+ .debug_loc     0x00000468       0x38 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
+ .debug_loc     0x000004a0       0x2c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
+ .debug_loc     0x000004cc       0x2c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+ .debug_loc     0x000004f8      0x21c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
+ .debug_loc     0x00000714     0x1d0e C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
+ .debug_loc     0x00002422       0x2c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
+ .debug_loc     0x0000244e      0x210 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
+
+.debug_aranges  0x00000000      0x1c0
+ .debug_aranges
+                0x00000000       0x20 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
+ .debug_aranges
+                0x00000020       0x20 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBStandardRequestProcess.o
+ .debug_aranges
+                0x00000040       0x20 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
+ .debug_aranges
+                0x00000060       0x20 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
+ .debug_aranges
+                0x00000080       0x20 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
+ .debug_aranges
+                0x000000a0       0x20 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
+ .debug_aranges
+                0x000000c0       0x20 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
+ .debug_aranges
+                0x000000e0       0x20 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
+ .debug_aranges
+                0x00000100       0x20 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+ .debug_aranges
+                0x00000120       0x20 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
+ .debug_aranges
+                0x00000140       0x20 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\reset_program.o
+ .debug_aranges
+                0x00000160       0x20 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
+ .debug_aranges
+                0x00000180       0x20 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
+ .debug_aranges
+                0x000001a0       0x20 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
+
+
+==============================================================
+
+Listfile generated by KPIT GNURX [ELF]-v11.03 on Wednesday, March 14, 2012, 04:31:25
+
+Build options:
+
+-T "C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208_Debug_auto.gsi"
+-T "C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208_input.tmp" 
+-L "c:\program files\renesas\hew\tools\kpit cummins\gnurx-elf\v11.03\rx-elf\lib\gcc\rx-elf\4.5-GNURX_v11.03"
+-L "C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug"
+-Map "C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.map"
+--start-group -l "gcc" -l "rxusbtest120208" --end-group
+-o "C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.x"
+-e _PowerON_Reset
+INPUT("C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\vector_table.o")
+INPUT("C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o")
+INPUT("C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBStandardRequestProcess.o")
+INPUT("C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o")
+INPUT("C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o")
+INPUT("C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBDescriptors.o")
+INPUT("C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o")
+INPUT("C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o")
+INPUT("C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o")
+INPUT("C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o")
+INPUT("C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o")
+INPUT("C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o")
+INPUT("C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\reset_program.o")
+INPUT("C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o")
+INPUT("C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o")
+INPUT("C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o")

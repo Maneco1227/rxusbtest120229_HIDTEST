@@ -1,0 +1,12 @@
+-c -x assembler-with-cpp
+-mcpu=rx600
+-mlittle-endian-data
+-mint-register=0
+-I "c:\program files\renesas\hew\tools\kpit cummins\gnurx-elf\v11.03\rx-elf\rx-elf\optlibinc"
+-D DEBUG
+-nostdinc
+"C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\reset_program.asm"
+-Wa,-gdwarf2
+-g
+-g2
+-o "C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\reset_program.o"

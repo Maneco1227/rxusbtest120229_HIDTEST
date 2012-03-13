@@ -1,0 +1,5 @@
+--compiler-options=-mcpu=rx600,-mlittle-endian-data,-mint-register=0,-Os,-fdata-sections,-ffunction-sections,-falign-jumps,-fno-function-cse,-funit-at-a-time
+--assembler-options=--mlittle-endian-data,--m32bit-doubles
+--output="C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\librxusbtest120208.a"
+--select-lib=optlib
+--header-files=stdio,stdlib,string
