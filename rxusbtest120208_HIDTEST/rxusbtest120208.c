@@ -217,41 +217,6 @@ void usbPipeSetup(void)
 		USB0.PIPEMAXP.BIT.MXPS = 64;
 	}
 
-	/*** BULK OUT ***/
-	{
-		/*Select Pipe*/
-		USB0.PIPESEL.BIT.PIPESEL = 2;
-	
-		/*Pipe Control*/
-		/*Note: PID must be set to NAK before configuring PIPECFG*/
-		USB0.PIPE2CTR.WORD = 0x000;
-		
-		/*Wait for pipe to be not busy*/
-		while(USB0.PIPE2CTR.BIT.PBUSY == 1);
-	
-		/*Pipe Configure, Direction, Type, Double Buffer, BRDY Interrupt operation*/
-		/*Default */
-		USB0.PIPECFG.WORD = 0;
-		
-		/*Endpoint*/
-		USB0.PIPECFG.BIT.EPNUM = 2;
-		
-		/*Direction*/
-		USB0.PIPECFG.BIT.DIR = 0;
-		
-		/*Double Buffer */
-		USB0.PIPECFG.BIT.DBLB = 1;
-		
-		/*BRDY Interrupt Operation*/
-		USB0.PIPECFG.BIT.BFRE = 0;
-		
-		/*Transfer Type */
-		USB0.PIPECFG.BIT.TYPE = 1;
-	
-		/*Pipe Packet Size*/
-		USB0.PIPEMAXP.BIT.MXPS = 64;
-	}
-
 	/*Un-select any pipe*/
 	USB0.PIPESEL.BIT.PIPESEL = 0;	
 }

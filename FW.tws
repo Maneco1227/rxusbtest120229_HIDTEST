@@ -17,11 +17,11 @@
 [WORKSPACE_FILE_STATES]
 "C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\USBControlReadDataStage.c" 50 50 957 570 0 1 
 "C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\USBControlWriteNoDataStage.c" 0 0 1223 858 0 6 
-"C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\USBDescriptors.c" 0 0 1223 858 0 0 
+"C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\USBDescriptors.c" -8 -30 1223 858 1 0 
 "C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\USBGetDescriptor.c" 100 100 957 570 0 4 
 "C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\USBInterruptHandler.c" 75 75 957 570 0 2 
 "C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\USBStandardRequestProcess.c" 125 125 957 570 0 5 
-"C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\rxusbtest120208.c" -8 -30 1223 858 1 3 
+"C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\rxusbtest120208.c" 0 0 1223 858 0 3 
 [LOADED_PROJECTS]
 "rxusbtest120208" 
 [END]

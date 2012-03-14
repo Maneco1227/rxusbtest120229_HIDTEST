@@ -24,12 +24,12 @@ unsigned char  usb_gpcdc_DeviceDescriptor[] =
 
 
 // Configuration Descriptor.
-unsigned short usb_gpcdc_ConfigrationDescriptorLength = 41;
+unsigned short usb_gpcdc_ConfigrationDescriptorLength = 34;
 unsigned char  usb_gpcdc_ConfigrationDescriptor[] =
 {
 	0x09,
 	0x02,
-	41, 0x00,
+	34, 0x00,
 	0x01,
 	0x01,
 	0x00,
@@ -57,13 +57,6 @@ unsigned char  usb_gpcdc_ConfigrationDescriptor[] =
 	0x07,
 	0x05,
 	0x81, // IN. EP1.
-	0x02, // BULK.
-	0x40, 0x00,
-	0xFF,
-
-	0x07,
-	0x05,
-	0x02, // OUT. EP2.
 	0x02, // BULK.
 	0x40, 0x00,
 	0xFF,
