@@ -32,6 +32,8 @@ extern unsigned char usb_gpcdc_StringDescriptor5[];
 extern unsigned char usb_gpcdc_StringDescriptor6[];
 extern unsigned char usb_gpcdc_StringDescriptor7[];
 
+extern unsigned char usb_gphid_ReportDescriptor[];
+
 extern void WriteControlINPacket();
 
 //
@@ -117,6 +119,14 @@ void GetStringDescriptor(void)
 }
 
 
+//
+void GetHIDReportDescriptor()
+{
+	p_dcpBuf = &usb_gphid_ReportDescriptor[0];
+	dcpBufCnt = 50;
+	WriteControlINPacket();
+}
+
 
 
 
@@ -153,11 +163,23 @@ void GetDescriptor(void)
 			case 0x08:
 				
 			default:
-				
 				break;
 			}
 			
 		}	
+		break;
+
+	case 0x81:
+		{
+			switch(wValue / 256)
+			{
+			case 0x22:
+				GetHIDReportDescriptor();
+			
+			default:
+				break;	
+			}
+		}
 		break;
 
 	default:
