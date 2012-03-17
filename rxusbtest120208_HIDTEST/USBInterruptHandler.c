@@ -245,50 +245,6 @@ void HandleBRDY(void)
 		
 	}	
 
-	//
-	/*Has BULK OUT pipe caused this interrupt (pipe1)*/
-	//
-	if((USB0.BRDYSTS.BIT.PIPE1BRDY == 1) && (USB0.BRDYENB.BIT.PIPE1BRDYE == 1))
-	{
-		DEBUGFIFO_OutLine("Pipe1 Interrupt.");
-
-		/*Clear this bit (write 1 to all other bits)*/
-		USB0.BRDYSTS.BIT.PIPE1BRDY = 0;
-		
-		/*Read received packet*/
-		//ReadBulkOUTPacket();
-		//USB0.CFIFOSEL.BIT.MBW = 0; // 8bit width.
-		//USB0.CFIFOSEL.BIT.CURPIPE = 1;
-		//USB0.PIPE1CTR.BIT.PID = 1; // PID = BUF.
-		
-		//while(USB0.CFIFOCTR.BIT.FRDY == 0);
-		
-		//USB0.CFIFOSEL.BIT.RCNT = 1;
-		
-		//while(USB0.CFIFOCTR.BIT.DTLN > 0)
-		//{
-		//	buf = USB0.CFIFO.BYTE.L;
-		//	
-		//	DEBUGFIFO_OutWordValue("USB0.CFIFO.BYTE.L = ", buf);
-		//	
-		//	if(buf == 0x31) ledOn(); else ledOff();
-		//}
-		
-		//if(USB0.CFIFOCTR.BIT.DTLN == 0)
-		//{
-		//	USB0.CFIFOCTR.BIT.BCLR = 1;
-		//}
-
-		//
-		// Echo back. 
-		//
-		
-		//p_pipe2Buf = "RX62 USB. ";
-		//pipe2BufCnt = 10;
-		
-		//USB0.BRDYENB.BIT.PIPE2BRDYE = 1;
-	}
-
 }
 /**********************************************************************
 End HandleBRDY function
@@ -309,6 +265,8 @@ extern void WriteControlINPacket(void);
 
 void HandleBEMP(void)
 {
+	DEBUGFIFO_OutWordValue("USB0.BEMPSTS.WORD = ",USB0.BEMPSTS.WORD);
+	
 	/*Has control pipe caused this interrupt*/
 	if(USB0.BEMPSTS.BIT.PIPE0BENP == 1)
 	{
@@ -338,7 +296,8 @@ void HandleBEMP(void)
 				USB0.DCPCTR.BIT.CCPL = 1;
 			}
 		//}
-	}	
+	}
+		
 	/*NOTE: for other pipes we are not using BEMP, only BRDY*/
 }
 /**********************************************************************

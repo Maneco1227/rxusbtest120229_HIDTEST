@@ -55,13 +55,14 @@
 [WINDOW_POSITION_STATE_DATA_VD3]
 [WINDOW_POSITION_STATE_DATA_VD4]
 [WINDOW_Z_ORDER]
-"C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\USBDescriptors.c" 
-"C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\USBGetDescriptor.c" 
-"C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\USBControlWriteNoDataStage.c" 
 "C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\USBInterruptHandler.c" 
-"C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\USBControlReadDataStage.c" 
 "C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\rxusbtest120208.c" 
-"C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\USBStandardRequestProcess.c" 
+"C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\USBWritePacket.c" 
+"C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\USBControlWriteNoDataStage.c" 
+"C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\USBGetDescriptor.c" 
+"C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\USBControlReadStatusStage.c" 
+"C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\USBDescriptors.c" 
+"C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\USBControlReadDataStage.c" 
 [TARGET_NAME]
 "" "" 0 
 [STATUSBAR_STATEINFO_VD1]

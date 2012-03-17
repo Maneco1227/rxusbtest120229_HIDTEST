@@ -59,14 +59,13 @@ void SetDefaultInterrupts(void)
 	/***Pipe specific***/
 	
 	/*Contol pipe*/
-	/*BEMP: used to continue sending data (or moving on to status stage)
-	during CONTROL IN DATA*/
+	/*BEMP: used to continue sending data (or moving on to status stage) during CONTROL IN DATA*/
 	USB0.BEMPENB.BIT.PIPE0BEMPE = 1;
 	
 	/*BRDY used for Control OUT = enabled when required*/
 	USB0.BRDYENB.BIT.PIPE0BRDYE = 0;
 	
-	/*Bulk OUT pipe (pipe1)*/
+	/*Bulk IN pipe (pipe1)*/
 	/*BEMP - enable only as required*/
 	USB0.BEMPENB.BIT.PIPE1BEMPE = 0;
 	
