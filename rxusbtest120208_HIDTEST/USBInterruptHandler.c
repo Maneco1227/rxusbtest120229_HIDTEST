@@ -243,7 +243,9 @@ void HandleBRDY(void)
 		//ReadControlOUTPacket();
 		
 		
-	}	
+	}
+	
+		
 
 }
 /**********************************************************************
@@ -297,8 +299,10 @@ void HandleBEMP(void)
 			}
 		//}
 	}
+
+
+
 		
-	/*NOTE: for other pipes we are not using BEMP, only BRDY*/
 }
 /**********************************************************************
 End HandleBEMP function

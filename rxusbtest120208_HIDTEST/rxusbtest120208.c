@@ -148,6 +148,10 @@ void portSetup()
 	// P23 is LED out.	
 	PORT2.DDR.BIT.B3 = 1;
 	
+	// P05 is input.
+	PORT0.DDR.BIT.B5 = 0;
+	
+	
 	// 
 	// USB0_DP, USB0_DM: Enable.
 	// P16: USB0_VBUS.
@@ -310,8 +314,11 @@ void ledOff()
 //
 //
 //
+
 int main(void)
 {
+	unsigned long i;
+	
 	// Configurations.
 	clockConfiguration();
 	moduleEnable();
@@ -340,10 +347,37 @@ int main(void)
 	DEBUGFIFO_OutLine("============================");
 	DEBUGFIFO_OutLine("");
 
+	
+	// Wait for setup;
+	for(i = 0; i < 0x017FFFFF; i++);
+
+	ledOn();
+	
+	DEBUGFIFO_OutLine("LED ON.");		
+
     while (1) {
-		// Do nothing.
+		for(i = 0; i < 0x000FFFFF; i++);
+		DEBUGFIFO_OutLine("Loop!");		
+
+		USB0.D0FIFOSEL.BIT.MBW = 0;
+		USB0.D0FIFOSEL.BIT.CURPIPE = 1;
+
+		while(USB0.D0FIFOCTR.BIT.FRDY == 0){;}
+		DEBUGFIFO_OutLine("FRDY = 1.");		
+
+		USB0.D0FIFO.BYTE.L = 0x00;
+		USB0.D0FIFO.BYTE.L = 0x40;
+		USB0.D0FIFO.BYTE.L = 0x40;
+
+		USB0.PIPE1CTR.BIT.PID = 1;
+		
+		USB0.D0FIFOCTR.BIT.BVAL = 1;
+
+		USB0.BRDYENB.BIT.PIPE1BRDYE = 0;
+
     }
-  return 0;
+  
+  	return 0;
 }
 
 void int13Handler()

@@ -59,7 +59,7 @@ void WriteBulkInPacket(void)
 	/*Write data to Bulk IN pipe using D0FIFO*/
 	/*Select Interrupt Pipe and 16 bit access*/
 	USB0.D0FIFOSEL.BIT.MBW = 0;
-	USB0.D0FIFOSEL.BIT.CURPIPE = 2;
+	USB0.D0FIFOSEL.BIT.CURPIPE = 1;
 
 	/*Wait for buffer to be ready*/
 	while(USB0.D0FIFOCTR.BIT.FRDY == 0){;}
@@ -89,7 +89,7 @@ void WriteBulkInPacket(void)
 	
 	/*Send the packet */
 	/*Set PID to BUF*/
-	USB0.PIPE2CTR.BIT.PID = 1;
+	USB0.PIPE1CTR.BIT.PID = 1;
 		
 	/*If we have not written a full packets worth to the buffer then need to
 	signal that the buffer is now ready to be sent, set the buffer valid flag (BVAL).*/
@@ -100,10 +100,10 @@ void WriteBulkInPacket(void)
 
 	if(Count != 64 && pipe2BufCnt == 0)
 	{
-		USB0.BRDYENB.BIT.PIPE2BRDYE = 0;
+		USB0.BRDYENB.BIT.PIPE1BRDYE = 0;
 	}
 	else
 	{
-		USB0.BRDYENB.BIT.PIPE2BRDYE = 1;
+		USB0.BRDYENB.BIT.PIPE1BRDYE = 1;
 	}
 }
