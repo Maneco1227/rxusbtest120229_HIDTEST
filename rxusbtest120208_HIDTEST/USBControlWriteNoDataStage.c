@@ -37,23 +37,6 @@ void SetConfiguration(void)
 	/*Clear Buffer*/
 	USB0.PIPE1CTR.BIT.ACLRM = 1;
 	USB0.PIPE1CTR.BIT.ACLRM = 0;
-	
-
-	/***BULK OUT***/	
-	/*PID must be set to NAK before configuring PIPECFG*/
-	USB0.PIPE2CTR.BIT.PID = 0;
-
-	/*Wait for pipe to be not busy*/
-	while(USB0.PIPE2CTR.BIT.PBUSY == 1);
-	
-	/*Reset Data toggle*/
-	USB0.PIPE2CTR.BIT.SQCLR = 1;	
-	
-	/*Clear Buffer*/
-	USB0.PIPE2CTR.BIT.ACLRM = 1;
-	USB0.PIPE2CTR.BIT.ACLRM = 0;
-
-
 }
 
 
@@ -105,7 +88,7 @@ void ControlWriteNoDataStage(void)
 	case 0x0021:
 		switch(bRequest)
 		{
-		case 0x0022:
+		case 0x000A:
 			// PID = BUF.
 			USB0.DCPCTR.BIT.PID = 1;	
 			/* Set CCPL bit */

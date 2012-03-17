@@ -192,7 +192,9 @@ void  INT_Excep_IRQ11(void){ }
 //;0x0130 IRQ12
 void  INT_Excep_IRQ12(void){ }
 //;0x0134 IRQ13
-void  INT_Excep_IRQ13(void){ }
+void  INT_Excep_IRQ13(void){
+	int13Handler();
+}
 //;0x0138 IRQ14
 void  INT_Excep_IRQ14(void){ }
 //;0x013C IRQ15

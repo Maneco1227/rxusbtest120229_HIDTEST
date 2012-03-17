@@ -284,10 +284,10 @@ void irqConfiguration()
 {
 	// USB.
 	ICU.IER[0x04].BIT.IEN6 = 1;   // USB0 Interrupt enable.
-	ICU.IPR[0x0e].BIT.IPR = 0x0f; // USB0 IRQ priority highest.
+	ICU.IPR[0x0e].BIT.IPR = 0x0F; // USB0 IRQ priority highest.
 	
 	ICU.IER[0x04].BIT.IEN4 = 1;   // USB0 Interrupt enable.
-	ICU.IPR[0x0c].BIT.IPR = 0x0f; // USB0 IRQ priority highest.
+	ICU.IPR[0x0c].BIT.IPR = 0x0F; // USB0 IRQ priority highest.
 	
 	// NMI
 	ICU.NMIER.BIT.NMIEN = 1;
@@ -345,3 +345,11 @@ int main(void)
     }
   return 0;
 }
+
+void int13Handler()
+{
+	DEBUGFIFO_OutLine("INT13 Asserted.");
+	ledOn();	
+}
+
+
