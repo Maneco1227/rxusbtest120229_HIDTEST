@@ -71,6 +71,31 @@ void ControlReadStatusStage(void)
 		}
 		break;
 		
+	case 0x0081:
+		switch(bRequest)
+		{
+		case 0x0006:
+			switch(wValue)
+			{
+				case 0x2200:
+					/* Set CCPL bit */
+					USB0.DCPCTR.BIT.CCPL = 1;
+					break;
+				
+				default:
+					// Stall.
+					USB0.DCPCTR.BIT.PID = 2;					
+					break;
+			}
+			break;
+		
+		default:
+			// Stall.
+			USB0.DCPCTR.BIT.PID = 2;					
+			break;
+		}
+		break;
+		
 	default:
 		// Stall.
 		USB0.DCPCTR.BIT.PID = 2;					

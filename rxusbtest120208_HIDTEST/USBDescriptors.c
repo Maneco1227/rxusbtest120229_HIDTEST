@@ -46,6 +46,7 @@ unsigned char  usb_gpcdc_ConfigrationDescriptor[] =
 	0x02,
 	0x00,
 	
+	// HID Descriptor.
 	0x09,
 	0x21,
 	0x01, 0x01,
@@ -54,6 +55,7 @@ unsigned char  usb_gpcdc_ConfigrationDescriptor[] =
 	0x22,
 	0x32, 0x00,
 
+	// EP Descriptor.
 	0x07,
 	0x05,
 	0x81, // IN. EP1.

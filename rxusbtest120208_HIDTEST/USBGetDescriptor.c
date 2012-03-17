@@ -122,8 +122,11 @@ void GetStringDescriptor(void)
 //
 void GetHIDReportDescriptor()
 {
+	DEBUGFIFO_OutLine("GetHIDReportDescriptor");
+	
 	p_dcpBuf = &usb_gphid_ReportDescriptor[0];
 	dcpBufCnt = 50;
+	
 	WriteControlINPacket();
 }
 
