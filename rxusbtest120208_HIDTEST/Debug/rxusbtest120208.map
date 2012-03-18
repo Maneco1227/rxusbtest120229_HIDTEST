@@ -25,7 +25,7 @@ Linker script and memory map
  .fvectors      0xffffffa0       0x60 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\vector_table.o
                 0xffffffa0                HardwareVectors
 
-.text           0xfffc0000     0x1be0
+.text           0xfffc0000     0x1bf8
  *(.text)
  .text          0xfffc0000       0x6e C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\reset_program.o
                 0xfffc0000                PowerON_Reset
@@ -46,248 +46,248 @@ Linker script and memory map
                 0xfffc0270                GetInterface
                 0xfffc0278                SetInterface
                 0xfffc0280                SynchFrame
- P              0xfffc0288      0x338 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
+ P              0xfffc0288      0x3a8 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
                 0xfffc0402                HandleBRDY
-                0xfffc0455                HandleBEMP
-                0xfffc04c6                USBInterruptHandler
- P              0xfffc05c0      0x238 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
-                0xfffc05c0                GetDeviceDescriptor
-                0xfffc05f1                GetConfigurationDescriptor
-                0xfffc0622                GetStringDescriptor
-                0xfffc0749                GetHIDReportDescriptor
-                0xfffc0777                GetDescriptor
- P              0xfffc07f8        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBDescriptors.o
- P              0xfffc07f8      0x140 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
-                0xfffc07f8                ControlWriteStatusStage
- P              0xfffc0938      0x1e8 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
-                0xfffc0938                SetConfiguration
-                0xfffc0993                ControlWriteNoDataStage
- P              0xfffc0b20      0x1b8 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
-                0xfffc0b20                ControlWriteDataStage
- P              0xfffc0cd8      0x1d0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
-                0xfffc0cd8                ControlReadStatusStage
- P              0xfffc0ea8      0x160 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
-                0xfffc0ea8                ControlReadDataStage
- P              0xfffc1008      0x450 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
-                0xfffc1008                SetDefaultInterrupts
-                0xfffc1084                HW_Init
-                0xfffc1111                clockConfiguration
-                0xfffc1138                moduleEnable
-                0xfffc114c                portSetup
-                0xfffc117f                usbModuleSetup
-                0xfffc11b2                usbPipeSetup
-                0xfffc1257                usbInterruptSetup
-                0xfffc12b0                irqConfiguration
-                0xfffc1302                ledOn
-                0xfffc1316                ledOff
-                0xfffc132a                main
-                0xfffc143c                int13Handler
- P              0xfffc1458        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\reset_program.o
- P              0xfffc1458      0x550 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
-                0xfffc1458                INT_Excep_SuperVisorInst
-                0xfffc1460                INT_Excep_UndefinedInst
-                0xfffc1468                INT_Excep_FloatingPoint
-                0xfffc1470                INT_NonMaskableInterrupt
-                0xfffc1478                Dummy
-                0xfffc1480                INT_Excep_BRK
-                0xfffc1488                INT_Excep_BUSERR
-                0xfffc1490                INT_Excep_FCU_FCUERR
-                0xfffc1498                INT_Excep_FCU_FRDYI
-                0xfffc14a0                INT_Excep_ICU_SWINT
-                0xfffc14a8                INT_Excep_CMTU0_CMI0
-                0xfffc14b0                INT_Excep_CMTU0_CMI1
-                0xfffc14b8                INT_Excep_CMTU1_CMI2
-                0xfffc14c0                INT_Excep_CMTU1_CMI3
-                0xfffc14c8                INT_Excep_ETHER_EINT
-                0xfffc14d0                INT_Excep_USB0_D0FIFO0
-                0xfffc14d8                INT_Excep_USB0_D1FIFO0
-                0xfffc14e0                INT_Excep_USB0_USBI0
-                0xfffc14ec                INT_Excep_USB1_D0FIFO1
-                0xfffc14f4                INT_Excep_USB1_D1FIFO1
-                0xfffc14fc                INT_Excep_USB1_USBI1
-                0xfffc1504                INT_Excep_RSPI0_SPEIO
-                0xfffc150c                INT_Excep_RSPI0_SPRI0
-                0xfffc1514                INT_Excep_RSPI0_SPTI0
-                0xfffc151c                INT_Excep_RSPI0_SPII0
-                0xfffc1524                INT_Excep_RSPI1_SPEI1
-                0xfffc152c                INT_Excep_RSPI1_SPRI1
-                0xfffc1534                INT_Excep_RSPI1_SPTI1
-                0xfffc153c                INT_Excep_RSPI1_SPII1
-                0xfffc1544                INT_Excep_CAN0_ERS0
-                0xfffc154c                INT_Excep_CAN0_RXF0
-                0xfffc1554                INT_Excep_CAN0_TXF0
-                0xfffc155c                INT_Excep_CAN0_RXM0
-                0xfffc1564                INT_Excep_CAN0_TXM0
-                0xfffc156c                INT_Excep_RTC_PRD
-                0xfffc1574                INT_Excep_RTC_CUP
-                0xfffc157c                INT_Excep_IRQ0
-                0xfffc1584                INT_Excep_IRQ1
-                0xfffc158c                INT_Excep_IRQ2
-                0xfffc1594                INT_Excep_IRQ3
-                0xfffc159c                INT_Excep_IRQ4
-                0xfffc15a4                INT_Excep_IRQ5
-                0xfffc15ac                INT_Excep_IRQ6
-                0xfffc15b4                INT_Excep_IRQ7
-                0xfffc15bc                INT_Excep_IRQ8
-                0xfffc15c4                INT_Excep_IRQ9
-                0xfffc15cc                INT_Excep_IRQ10
-                0xfffc15d4                INT_Excep_IRQ11
-                0xfffc15dc                INT_Excep_IRQ12
-                0xfffc15e4                INT_Excep_IRQ13
-                0xfffc15f0                INT_Excep_IRQ14
-                0xfffc15f8                INT_Excep_IRQ15
-                0xfffc1600                INT_Excep_USBR_USBR0
-                0xfffc1608                INT_Excep_USBR_USBR1
-                0xfffc1610                INT_Excep_RTC_ALM
-                0xfffc1618                INT_Excep_WDT_WOVI
-                0xfffc1620                INT_Excep_AD0_ADI0
-                0xfffc1628                INT_Excep_AD1_ADI1
-                0xfffc1630                INT_Excep_S12AD_ADI12_0
-                0xfffc1638                INT_Excep_MTU0_TGIA0
-                0xfffc1640                INT_Excep_MTU0_TGIB0
-                0xfffc1648                INT_Excep_MTU0_TGICO
-                0xfffc1650                INT_Excep_MTU0_TGID0
-                0xfffc1658                INT_Excep_MTU0_TCIV0
-                0xfffc1660                INT_Excep_MTU0_TGIE0
-                0xfffc1668                INT_Excep_MTU0_TGIF0
-                0xfffc1670                INT_Excep_MTU1_TGIA1
-                0xfffc1678                INT_Excep_MTU1_TGIB1
-                0xfffc1680                INT_Excep_MTU1_TCIV1
-                0xfffc1688                INT_Excep_MTU1_TCIU1
-                0xfffc1690                INT_Excep_MTU2_TGIA2
-                0xfffc1698                INT_Excep_MTU2_TGIB2
-                0xfffc16a0                INT_Excep_MTU2_TCIV2
-                0xfffc16a8                INT_Excep_MTU2_TCIU2
-                0xfffc16b0                INT_Excep_MTU3_TGIA3
-                0xfffc16b8                INT_Excep_MTU3_TGIB3
-                0xfffc16c0                INT_Excep_MTU3_TGIC3
-                0xfffc16c8                INT_Excep_MTU3_TGID3
-                0xfffc16d0                INT_Excep_MTU3_TCIV3
-                0xfffc16d8                INT_Excep_MTU4_TGIA4
-                0xfffc16e0                INT_Excep_MTU4_TGIB4
-                0xfffc16e8                INT_Excep_MTU4_TGIC4
-                0xfffc16f0                INT_Excep_MTU4_TGID4
-                0xfffc16f8                INT_Excep_MTU4_TCIV4
-                0xfffc1700                INT_Excep_MTU5_TGIU5
-                0xfffc1708                INT_Excep_MTU5_TGIV5
-                0xfffc1710                INT_Excep_MTU5_TGIW5
-                0xfffc1718                INT_Excep_MTU6_TGIA6
-                0xfffc1720                INT_Excep_MTU6_TGIB6
-                0xfffc1728                INT_Excep_MTU6_TGIC6
-                0xfffc1730                INT_Excep_MTU6_TGID6
-                0xfffc1738                INT_Excep_MTU6_TCIV6
-                0xfffc1740                INT_Excep_MTU6_TGIE6
-                0xfffc1748                INT_Excep_MTU6_TGIF6
-                0xfffc1750                INT_Excep_MTU7_TGIA7
-                0xfffc1758                INT_Excep_MTU7_TGIB7
-                0xfffc1760                INT_Excep_MTU7_TCIV7
-                0xfffc1768                INT_Excep_MTU7_TCIU7
-                0xfffc1770                INT_Excep_MTU8_TGIA8
-                0xfffc1778                INT_Excep_MTU8_TGIB8
-                0xfffc1780                INT_Excep_MTU8_TCIV8
-                0xfffc1788                INT_Excep_MTU8_TCIU8
-                0xfffc1790                INT_Excep_MTU9_TGIA9
-                0xfffc1798                INT_Excep_MTU9_TGIB9
-                0xfffc17a0                INT_Excep_MTU9_TGIC9
-                0xfffc17a8                INT_Excep_MTU9_TGID9
-                0xfffc17b0                INT_Excep_MTU9_TCIV9
-                0xfffc17b8                INT_Excep_MTU10_TGIA10
-                0xfffc17c0                INT_Excep_MTU10_TGIB10
-                0xfffc17c8                INT_Excep_MTU10_TGIC10
-                0xfffc17d0                INT_Excep_MTU10_TGID10
-                0xfffc17d8                INT_Excep_MTU10_TCIV10
-                0xfffc17e0                INT_Excep_MTU11_TGIU11
-                0xfffc17e8                INT_Excep_MTU11_TGIV11
-                0xfffc17f0                INT_Excep_MTU11_TGIW11
-                0xfffc17f8                INT_Excep_POE_OEI1
-                0xfffc1800                INT_Excep_POE_OEI2
-                0xfffc1808                INT_Excep_POE_OEI3
-                0xfffc1810                INT_Excep_POE_OEI4
-                0xfffc1818                INT_Excep_TMR0_CMIA0
-                0xfffc1820                INT_Excep_TMR0_CMIB0
-                0xfffc1828                INT_Excep_TMR0_OVI0
-                0xfffc1830                INT_Excep_TMR1_CMIA1
-                0xfffc1838                INT_Excep_TMR1_CMIB1
-                0xfffc1840                INT_Excep_TMR1_OVI1
-                0xfffc1848                INT_Excep_TMR2_CMIA2
-                0xfffc1850                INT_Excep_TMR2_CMIB2
-                0xfffc1858                INT_Excep_TMR2_OVI2
-                0xfffc1860                INT_Excep_TMR3_CMIA3
-                0xfffc1868                INT_Excep_TMR3_CMIB3
-                0xfffc1870                INT_Excep_TMR3_OVI3
-                0xfffc1878                INT_Excep_DMACA_DMAC0I
-                0xfffc1880                INT_Excep_DMACA_DMAC1I
-                0xfffc1888                INT_Excep_DMACA_DMAC2I
-                0xfffc1890                INT_Excep_DMACA_DMAC3I
-                0xfffc1898                INT_Excep_EXDMAC_EXDMAC_0I
-                0xfffc18a0                INT_Excep_EXDMAC_EXDMAC_1I
-                0xfffc18a8                INT_Excep_SCI0_ERI0
-                0xfffc18b0                INT_Excep_SCI0_RXI0
-                0xfffc18b8                INT_Excep_SCI0_TXI0
-                0xfffc18c0                INT_Excep_SCI0_TEI0
-                0xfffc18c8                INT_Excep_SCI1_ERI1
-                0xfffc18d0                INT_Excep_SCI1_RXI1
-                0xfffc18d8                INT_Excep_SCI1_TXI1
-                0xfffc18e0                INT_Excep_SCI1_TEI1
-                0xfffc18e8                INT_Excep_SCI2_ERI2
-                0xfffc18f0                INT_Excep_SCI2_RXI2
-                0xfffc18f8                INT_Excep_SCI2_TXI2
-                0xfffc1900                INT_Excep_SCI2_TEI2
-                0xfffc1908                INT_Excep_SCI3_ERI3
-                0xfffc1910                INT_Excep_SCI3_RXI3
-                0xfffc1918                INT_Excep_SCI3_TXI3
-                0xfffc1920                INT_Excep_SCI3_TEI3
-                0xfffc1928                INT_Excep_SCI5_ERI5
-                0xfffc1930                INT_Excep_SCI5_RXI5
-                0xfffc1938                INT_Excep_SCI5_TXI5
-                0xfffc1940                INT_Excep_SCI5_TEI5
-                0xfffc1948                INT_Excep_SCI6_ERI6
-                0xfffc1950                INT_Excep_SCI6_RXI6
-                0xfffc1958                INT_Excep_SCI6_TXI6
-                0xfffc1960                INT_Excep_SCI6_TEI6
-                0xfffc1968                INT_Excep_RIIC0_ICEEI0
-                0xfffc1970                INT_Excep_RIIC0_ICRXI0
-                0xfffc1978                INT_Excep_RIIC0_ICTXI0
-                0xfffc1980                INT_Excep_RIIC0_ICTEI0
-                0xfffc1988                INT_Excep_RIIC1_ICEEI1
-                0xfffc1990                INT_Excep_RIIC1_ICRXI1
-                0xfffc1998                INT_Excep_RIIC1_ICTXI1
-                0xfffc19a0                INT_Excep_RIIC1_ICTEI1
- P              0xfffc19a8        0x7 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
-                0xfffc19a8                HardwareSetup
- *fill*         0xfffc19af        0x1 00
- P              0xfffc19b0      0x230 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
-                0xfffc19b0                DEBUGFIFO_Init
-                0xfffc19d5                DEBUGFIFO_OutChar
-                0xfffc1a1f                DEBUGFIFO_OutString
-                0xfffc1a47                DEBUGFIFO_OutLine
-                0xfffc1a7b                DEBUGFIFO_OutNibble
-                0xfffc1b3f                DEBUGFIFO_OutByte
-                0xfffc1b6c                DEBUGFIFO_OutWord
-                0xfffc1b97                DEBUGFIFO_OutByteValue
-                0xfffc1bbb                DEBUGFIFO_OutWordValue
-                0xfffc1be0                etext = .
+                0xfffc04cb                HandleBEMP
+                0xfffc053d                USBInterruptHandler
+ P              0xfffc0630      0x238 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
+                0xfffc0630                GetDeviceDescriptor
+                0xfffc0661                GetConfigurationDescriptor
+                0xfffc0692                GetStringDescriptor
+                0xfffc07b9                GetHIDReportDescriptor
+                0xfffc07e7                GetDescriptor
+ P              0xfffc0868        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBDescriptors.o
+ P              0xfffc0868      0x140 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
+                0xfffc0868                ControlWriteStatusStage
+ P              0xfffc09a8      0x1e8 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
+                0xfffc09a8                SetConfiguration
+                0xfffc0a03                ControlWriteNoDataStage
+ P              0xfffc0b90      0x1b8 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
+                0xfffc0b90                ControlWriteDataStage
+ P              0xfffc0d48      0x1d0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
+                0xfffc0d48                ControlReadStatusStage
+ P              0xfffc0f18      0x160 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+                0xfffc0f18                ControlReadDataStage
+ P              0xfffc1078      0x3f8 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
+                0xfffc1078                SetDefaultInterrupts
+                0xfffc10f4                HW_Init
+                0xfffc1181                clockConfiguration
+                0xfffc11a8                moduleEnable
+                0xfffc11bc                portSetup
+                0xfffc11ef                usbModuleSetup
+                0xfffc1222                usbPipeSetup
+                0xfffc12c7                usbInterruptSetup
+                0xfffc1320                irqConfiguration
+                0xfffc1372                ledOn
+                0xfffc1386                ledOff
+                0xfffc139a                main
+                0xfffc1454                int13Handler
+ P              0xfffc1470        0x0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\reset_program.o
+ P              0xfffc1470      0x550 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
+                0xfffc1470                INT_Excep_SuperVisorInst
+                0xfffc1478                INT_Excep_UndefinedInst
+                0xfffc1480                INT_Excep_FloatingPoint
+                0xfffc1488                INT_NonMaskableInterrupt
+                0xfffc1490                Dummy
+                0xfffc1498                INT_Excep_BRK
+                0xfffc14a0                INT_Excep_BUSERR
+                0xfffc14a8                INT_Excep_FCU_FCUERR
+                0xfffc14b0                INT_Excep_FCU_FRDYI
+                0xfffc14b8                INT_Excep_ICU_SWINT
+                0xfffc14c0                INT_Excep_CMTU0_CMI0
+                0xfffc14c8                INT_Excep_CMTU0_CMI1
+                0xfffc14d0                INT_Excep_CMTU1_CMI2
+                0xfffc14d8                INT_Excep_CMTU1_CMI3
+                0xfffc14e0                INT_Excep_ETHER_EINT
+                0xfffc14e8                INT_Excep_USB0_D0FIFO0
+                0xfffc14f0                INT_Excep_USB0_D1FIFO0
+                0xfffc14f8                INT_Excep_USB0_USBI0
+                0xfffc1504                INT_Excep_USB1_D0FIFO1
+                0xfffc150c                INT_Excep_USB1_D1FIFO1
+                0xfffc1514                INT_Excep_USB1_USBI1
+                0xfffc151c                INT_Excep_RSPI0_SPEIO
+                0xfffc1524                INT_Excep_RSPI0_SPRI0
+                0xfffc152c                INT_Excep_RSPI0_SPTI0
+                0xfffc1534                INT_Excep_RSPI0_SPII0
+                0xfffc153c                INT_Excep_RSPI1_SPEI1
+                0xfffc1544                INT_Excep_RSPI1_SPRI1
+                0xfffc154c                INT_Excep_RSPI1_SPTI1
+                0xfffc1554                INT_Excep_RSPI1_SPII1
+                0xfffc155c                INT_Excep_CAN0_ERS0
+                0xfffc1564                INT_Excep_CAN0_RXF0
+                0xfffc156c                INT_Excep_CAN0_TXF0
+                0xfffc1574                INT_Excep_CAN0_RXM0
+                0xfffc157c                INT_Excep_CAN0_TXM0
+                0xfffc1584                INT_Excep_RTC_PRD
+                0xfffc158c                INT_Excep_RTC_CUP
+                0xfffc1594                INT_Excep_IRQ0
+                0xfffc159c                INT_Excep_IRQ1
+                0xfffc15a4                INT_Excep_IRQ2
+                0xfffc15ac                INT_Excep_IRQ3
+                0xfffc15b4                INT_Excep_IRQ4
+                0xfffc15bc                INT_Excep_IRQ5
+                0xfffc15c4                INT_Excep_IRQ6
+                0xfffc15cc                INT_Excep_IRQ7
+                0xfffc15d4                INT_Excep_IRQ8
+                0xfffc15dc                INT_Excep_IRQ9
+                0xfffc15e4                INT_Excep_IRQ10
+                0xfffc15ec                INT_Excep_IRQ11
+                0xfffc15f4                INT_Excep_IRQ12
+                0xfffc15fc                INT_Excep_IRQ13
+                0xfffc1608                INT_Excep_IRQ14
+                0xfffc1610                INT_Excep_IRQ15
+                0xfffc1618                INT_Excep_USBR_USBR0
+                0xfffc1620                INT_Excep_USBR_USBR1
+                0xfffc1628                INT_Excep_RTC_ALM
+                0xfffc1630                INT_Excep_WDT_WOVI
+                0xfffc1638                INT_Excep_AD0_ADI0
+                0xfffc1640                INT_Excep_AD1_ADI1
+                0xfffc1648                INT_Excep_S12AD_ADI12_0
+                0xfffc1650                INT_Excep_MTU0_TGIA0
+                0xfffc1658                INT_Excep_MTU0_TGIB0
+                0xfffc1660                INT_Excep_MTU0_TGICO
+                0xfffc1668                INT_Excep_MTU0_TGID0
+                0xfffc1670                INT_Excep_MTU0_TCIV0
+                0xfffc1678                INT_Excep_MTU0_TGIE0
+                0xfffc1680                INT_Excep_MTU0_TGIF0
+                0xfffc1688                INT_Excep_MTU1_TGIA1
+                0xfffc1690                INT_Excep_MTU1_TGIB1
+                0xfffc1698                INT_Excep_MTU1_TCIV1
+                0xfffc16a0                INT_Excep_MTU1_TCIU1
+                0xfffc16a8                INT_Excep_MTU2_TGIA2
+                0xfffc16b0                INT_Excep_MTU2_TGIB2
+                0xfffc16b8                INT_Excep_MTU2_TCIV2
+                0xfffc16c0                INT_Excep_MTU2_TCIU2
+                0xfffc16c8                INT_Excep_MTU3_TGIA3
+                0xfffc16d0                INT_Excep_MTU3_TGIB3
+                0xfffc16d8                INT_Excep_MTU3_TGIC3
+                0xfffc16e0                INT_Excep_MTU3_TGID3
+                0xfffc16e8                INT_Excep_MTU3_TCIV3
+                0xfffc16f0                INT_Excep_MTU4_TGIA4
+                0xfffc16f8                INT_Excep_MTU4_TGIB4
+                0xfffc1700                INT_Excep_MTU4_TGIC4
+                0xfffc1708                INT_Excep_MTU4_TGID4
+                0xfffc1710                INT_Excep_MTU4_TCIV4
+                0xfffc1718                INT_Excep_MTU5_TGIU5
+                0xfffc1720                INT_Excep_MTU5_TGIV5
+                0xfffc1728                INT_Excep_MTU5_TGIW5
+                0xfffc1730                INT_Excep_MTU6_TGIA6
+                0xfffc1738                INT_Excep_MTU6_TGIB6
+                0xfffc1740                INT_Excep_MTU6_TGIC6
+                0xfffc1748                INT_Excep_MTU6_TGID6
+                0xfffc1750                INT_Excep_MTU6_TCIV6
+                0xfffc1758                INT_Excep_MTU6_TGIE6
+                0xfffc1760                INT_Excep_MTU6_TGIF6
+                0xfffc1768                INT_Excep_MTU7_TGIA7
+                0xfffc1770                INT_Excep_MTU7_TGIB7
+                0xfffc1778                INT_Excep_MTU7_TCIV7
+                0xfffc1780                INT_Excep_MTU7_TCIU7
+                0xfffc1788                INT_Excep_MTU8_TGIA8
+                0xfffc1790                INT_Excep_MTU8_TGIB8
+                0xfffc1798                INT_Excep_MTU8_TCIV8
+                0xfffc17a0                INT_Excep_MTU8_TCIU8
+                0xfffc17a8                INT_Excep_MTU9_TGIA9
+                0xfffc17b0                INT_Excep_MTU9_TGIB9
+                0xfffc17b8                INT_Excep_MTU9_TGIC9
+                0xfffc17c0                INT_Excep_MTU9_TGID9
+                0xfffc17c8                INT_Excep_MTU9_TCIV9
+                0xfffc17d0                INT_Excep_MTU10_TGIA10
+                0xfffc17d8                INT_Excep_MTU10_TGIB10
+                0xfffc17e0                INT_Excep_MTU10_TGIC10
+                0xfffc17e8                INT_Excep_MTU10_TGID10
+                0xfffc17f0                INT_Excep_MTU10_TCIV10
+                0xfffc17f8                INT_Excep_MTU11_TGIU11
+                0xfffc1800                INT_Excep_MTU11_TGIV11
+                0xfffc1808                INT_Excep_MTU11_TGIW11
+                0xfffc1810                INT_Excep_POE_OEI1
+                0xfffc1818                INT_Excep_POE_OEI2
+                0xfffc1820                INT_Excep_POE_OEI3
+                0xfffc1828                INT_Excep_POE_OEI4
+                0xfffc1830                INT_Excep_TMR0_CMIA0
+                0xfffc1838                INT_Excep_TMR0_CMIB0
+                0xfffc1840                INT_Excep_TMR0_OVI0
+                0xfffc1848                INT_Excep_TMR1_CMIA1
+                0xfffc1850                INT_Excep_TMR1_CMIB1
+                0xfffc1858                INT_Excep_TMR1_OVI1
+                0xfffc1860                INT_Excep_TMR2_CMIA2
+                0xfffc1868                INT_Excep_TMR2_CMIB2
+                0xfffc1870                INT_Excep_TMR2_OVI2
+                0xfffc1878                INT_Excep_TMR3_CMIA3
+                0xfffc1880                INT_Excep_TMR3_CMIB3
+                0xfffc1888                INT_Excep_TMR3_OVI3
+                0xfffc1890                INT_Excep_DMACA_DMAC0I
+                0xfffc1898                INT_Excep_DMACA_DMAC1I
+                0xfffc18a0                INT_Excep_DMACA_DMAC2I
+                0xfffc18a8                INT_Excep_DMACA_DMAC3I
+                0xfffc18b0                INT_Excep_EXDMAC_EXDMAC_0I
+                0xfffc18b8                INT_Excep_EXDMAC_EXDMAC_1I
+                0xfffc18c0                INT_Excep_SCI0_ERI0
+                0xfffc18c8                INT_Excep_SCI0_RXI0
+                0xfffc18d0                INT_Excep_SCI0_TXI0
+                0xfffc18d8                INT_Excep_SCI0_TEI0
+                0xfffc18e0                INT_Excep_SCI1_ERI1
+                0xfffc18e8                INT_Excep_SCI1_RXI1
+                0xfffc18f0                INT_Excep_SCI1_TXI1
+                0xfffc18f8                INT_Excep_SCI1_TEI1
+                0xfffc1900                INT_Excep_SCI2_ERI2
+                0xfffc1908                INT_Excep_SCI2_RXI2
+                0xfffc1910                INT_Excep_SCI2_TXI2
+                0xfffc1918                INT_Excep_SCI2_TEI2
+                0xfffc1920                INT_Excep_SCI3_ERI3
+                0xfffc1928                INT_Excep_SCI3_RXI3
+                0xfffc1930                INT_Excep_SCI3_TXI3
+                0xfffc1938                INT_Excep_SCI3_TEI3
+                0xfffc1940                INT_Excep_SCI5_ERI5
+                0xfffc1948                INT_Excep_SCI5_RXI5
+                0xfffc1950                INT_Excep_SCI5_TXI5
+                0xfffc1958                INT_Excep_SCI5_TEI5
+                0xfffc1960                INT_Excep_SCI6_ERI6
+                0xfffc1968                INT_Excep_SCI6_RXI6
+                0xfffc1970                INT_Excep_SCI6_TXI6
+                0xfffc1978                INT_Excep_SCI6_TEI6
+                0xfffc1980                INT_Excep_RIIC0_ICEEI0
+                0xfffc1988                INT_Excep_RIIC0_ICRXI0
+                0xfffc1990                INT_Excep_RIIC0_ICTXI0
+                0xfffc1998                INT_Excep_RIIC0_ICTEI0
+                0xfffc19a0                INT_Excep_RIIC1_ICEEI1
+                0xfffc19a8                INT_Excep_RIIC1_ICRXI1
+                0xfffc19b0                INT_Excep_RIIC1_ICTXI1
+                0xfffc19b8                INT_Excep_RIIC1_ICTEI1
+ P              0xfffc19c0        0x7 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
+                0xfffc19c0                HardwareSetup
+ *fill*         0xfffc19c7        0x1 00
+ P              0xfffc19c8      0x230 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
+                0xfffc19c8                DEBUGFIFO_Init
+                0xfffc19ed                DEBUGFIFO_OutChar
+                0xfffc1a37                DEBUGFIFO_OutString
+                0xfffc1a5f                DEBUGFIFO_OutLine
+                0xfffc1a93                DEBUGFIFO_OutNibble
+                0xfffc1b57                DEBUGFIFO_OutByte
+                0xfffc1b84                DEBUGFIFO_OutWord
+                0xfffc1baf                DEBUGFIFO_OutByteValue
+                0xfffc1bd3                DEBUGFIFO_OutWordValue
+                0xfffc1bf8                etext = .
 
-.rvectors       0xfffc1be0      0x400
-                0xfffc1be0                _rvectors_start = .
+.rvectors       0xfffc1bf8      0x400
+                0xfffc1bf8                _rvectors_start = .
  *(.rvectors)
- .rvectors      0xfffc1be0      0x400 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\vector_table.o
-                0xfffc1be0                RelocatableVectors
-                0xfffc1fe0                _rvectors_end = .
+ .rvectors      0xfffc1bf8      0x400 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\vector_table.o
+                0xfffc1bf8                RelocatableVectors
+                0xfffc1ff8                _rvectors_end = .
 
-.init           0xfffc1fe0        0x0
+.init           0xfffc1ff8        0x0
  *(.init)
-                0xfffc1fe0                __preinit_array_start = .
+                0xfffc1ff8                __preinit_array_start = .
  *(.preinit_array)
-                0xfffc1fe0                __preinit_array_end = .
-                0xfffc1fe0                __init_array_start = ((. + 0x3) & 0xfffffffc)
+                0xfffc1ff8                __preinit_array_end = .
+                0xfffc1ff8                __init_array_start = ((. + 0x3) & 0xfffffffc)
  *(.init_array)
  *(SORT(.init_array.*))
-                0xfffc1fe0                __init_array_end = .
-                0xfffc1fe0                __fini_array_start = .
+                0xfffc1ff8                __init_array_end = .
+                0xfffc1ff8                __fini_array_start = .
  *(.fini_array)
  *(SORT(.fini_array.*))
-                0xfffc1fe0                __fini_array_end = .
+                0xfffc1ff8                __fini_array_end = .
 
 .fini
  *(.fini)
@@ -296,22 +296,22 @@ Linker script and memory map
  *(.got)
  *(.got.plt)
 
-.rodata         0xfffc1fe0      0x53c
+.rodata         0xfffc1ff8      0x544
  *(.rodata)
  *(.rodata.*)
  *(C_1)
  *(C_2)
  *(C)
- C              0xfffc1fe0      0x1e0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
- C              0xfffc21c0       0x88 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
- C              0xfffc2248       0x58 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
- C              0xfffc22a0       0x6c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
- C              0xfffc230c       0x84 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
- C              0xfffc2390       0x58 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
- C              0xfffc23e8       0x8c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
- C              0xfffc2474       0x64 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
- C              0xfffc24d8       0x44 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
-                0xfffc251c                _erodata = .
+ C              0xfffc1ff8      0x1f0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
+ C              0xfffc21e8       0x88 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
+ C              0xfffc2270       0x58 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
+ C              0xfffc22c8       0x6c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
+ C              0xfffc2334       0x84 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
+ C              0xfffc23b8       0x58 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
+ C              0xfffc2410       0x8c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+ C              0xfffc249c       0x5c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
+ C              0xfffc24f8       0x44 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
+                0xfffc253c                _erodata = .
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
@@ -322,18 +322,18 @@ Linker script and memory map
 .jcr
  *(.jcr)
 
-.tors           0xfffc251c        0x0
-                0xfffc251c                __CTOR_LIST__ = .
-                0xfffc251c                ___ctors = .
+.tors           0xfffc253c        0x0
+                0xfffc253c                __CTOR_LIST__ = .
+                0xfffc253c                ___ctors = .
  *(.ctors)
-                0xfffc251c                ___ctors_end = .
-                0xfffc251c                __CTOR_END__ = .
-                0xfffc251c                __DTOR_LIST__ = .
-                0xfffc251c                ___dtors = .
+                0xfffc253c                ___ctors_end = .
+                0xfffc253c                __CTOR_END__ = .
+                0xfffc253c                __DTOR_LIST__ = .
+                0xfffc253c                ___dtors = .
  *(.dtors)
-                0xfffc251c                ___dtors_end = .
-                0xfffc251c                __DTOR_END__ = .
-                0xfffc251c                _mdata = .
+                0xfffc253c                ___dtors_end = .
+                0xfffc253c                __DTOR_END__ = .
+                0xfffc253c                _mdata = .
 
 .istack         0x00001808        0x0
                 0x00001808                _istack = .
@@ -341,7 +341,7 @@ Linker script and memory map
 .ustack         0x00001708        0x0
                 0x00001708                _ustack = .
 
-.data           0x00001001      0x113 load address 0xfffc251c
+.data           0x00001001      0x113 load address 0xfffc253c
                 0x00001001                _data = .
  *(.data)
  *(.data.*)
@@ -384,7 +384,7 @@ Linker script and memory map
 .gcc_exc
  *(.gcc_exc)
 
-.bss            0x00001114       0x16 load address 0xfffc2630
+.bss            0x00001114       0x16 load address 0xfffc2650
                 0x00001114                _bss = .
  *(.bss)
  *(.bss.*)
@@ -443,7 +443,7 @@ LOAD C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\librxusb
 END GROUP
 OUTPUT(C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.x elf32-rx-le)
 
-.debug_abbrev   0x00000000      0xc92
+.debug_abbrev   0x00000000      0xcb5
  .debug_abbrev  0x00000000       0x69 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\vector_table.o
  .debug_abbrev  0x00000069      0x10b C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
  .debug_abbrev  0x00000174       0x43 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBStandardRequestProcess.o
@@ -455,13 +455,13 @@ OUTPUT(C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbt
  .debug_abbrev  0x00000654       0xfa C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
  .debug_abbrev  0x0000074e       0xe0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
  .debug_abbrev  0x0000082e      0x130 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
- .debug_abbrev  0x0000095e      0x16d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
- .debug_abbrev  0x00000acb       0x14 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\reset_program.o
- .debug_abbrev  0x00000adf       0x74 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
- .debug_abbrev  0x00000b53       0x32 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
- .debug_abbrev  0x00000b85      0x10d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
+ .debug_abbrev  0x0000095e      0x190 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
+ .debug_abbrev  0x00000aee       0x14 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\reset_program.o
+ .debug_abbrev  0x00000b02       0x74 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
+ .debug_abbrev  0x00000b76       0x32 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
+ .debug_abbrev  0x00000ba8      0x10d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
 
-.debug_info     0x00000000    0x183b6
+.debug_info     0x00000000    0x1841b
  .debug_info    0x00000000       0x8b C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\vector_table.o
  .debug_info    0x0000008b     0x2281 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
  .debug_info    0x0000230c      0x115 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBStandardRequestProcess.o
@@ -473,29 +473,29 @@ OUTPUT(C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbt
  .debug_info    0x0000b114     0x2263 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
  .debug_info    0x0000d377     0x2246 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
  .debug_info    0x0000f5bd     0x2342 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
- .debug_info    0x000118ff     0x50f4 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
- .debug_info    0x000169f3       0xc5 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\reset_program.o
- .debug_info    0x00016ab8      0xe88 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
- .debug_info    0x00017940       0x53 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
- .debug_info    0x00017993      0xa23 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
+ .debug_info    0x000118ff     0x5159 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
+ .debug_info    0x00016a58       0xc5 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\reset_program.o
+ .debug_info    0x00016b1d      0xe88 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
+ .debug_info    0x000179a5       0x53 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
+ .debug_info    0x000179f8      0xa23 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
 
-.debug_line     0x00000000      0xfa9
+.debug_line     0x00000000      0xfb6
  .debug_line    0x00000000       0x6c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\vector_table.o
  .debug_line    0x0000006c      0x12d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
  .debug_line    0x00000199       0xa2 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBStandardRequestProcess.o
- .debug_line    0x0000023b      0x153 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
- .debug_line    0x0000038e      0x11b C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
- .debug_line    0x000004a9       0x6e C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBDescriptors.o
- .debug_line    0x00000517       0xf3 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
- .debug_line    0x0000060a      0x10b C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
- .debug_line    0x00000715      0x108 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
- .debug_line    0x0000081d      0x103 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
- .debug_line    0x00000920       0xff C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
- .debug_line    0x00000a1f      0x168 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
- .debug_line    0x00000b87       0x9e C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\reset_program.o
- .debug_line    0x00000c25      0x1e6 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
- .debug_line    0x00000e0b       0x80 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
- .debug_line    0x00000e8b      0x11e C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
+ .debug_line    0x0000023b      0x16c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
+ .debug_line    0x000003a7      0x11b C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
+ .debug_line    0x000004c2       0x6e C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBDescriptors.o
+ .debug_line    0x00000530       0xf3 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
+ .debug_line    0x00000623      0x10b C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
+ .debug_line    0x0000072e      0x108 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
+ .debug_line    0x00000836      0x103 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
+ .debug_line    0x00000939       0xff C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+ .debug_line    0x00000a38      0x15c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
+ .debug_line    0x00000b94       0x9e C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\reset_program.o
+ .debug_line    0x00000c32      0x1e6 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
+ .debug_line    0x00000e18       0x80 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
+ .debug_line    0x00000e98      0x11e C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
 
 .debug_pubnames
                 0x00000000     0x175c
@@ -582,7 +582,7 @@ OUTPUT(C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbt
  .debug_str     0x00000d3a       0x6c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
                                 0x789 (size before relaxing)
  .debug_str     0x00000da6      0x892 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
-                                0xefe (size before relaxing)
+                                0xf15 (size before relaxing)
  .debug_str     0x00001638      0xdd6 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
                                 0xdfa (size before relaxing)
  .debug_str     0x0000240e       0x5c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
@@ -608,35 +608,35 @@ OUTPUT(C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbt
  .comment       0x00000000       0x1d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
  .comment       0x00000000       0x1d C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
 
-.debug_frame    0x00000000     0x17bc
+.debug_frame    0x00000000     0x17c0
  .debug_frame   0x00000000       0x64 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
  .debug_frame   0x00000064       0xec C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBStandardRequestProcess.o
- .debug_frame   0x00000150       0xe4 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
- .debug_frame   0x00000234       0xc0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
- .debug_frame   0x000002f4       0x38 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
- .debug_frame   0x0000032c       0x5c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
- .debug_frame   0x00000388       0x3c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
- .debug_frame   0x000003c4       0x38 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
- .debug_frame   0x000003fc       0x38 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
- .debug_frame   0x00000434      0x1e4 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
- .debug_frame   0x00000618     0x1024 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
- .debug_frame   0x0000163c       0x2c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
- .debug_frame   0x00001668      0x154 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
+ .debug_frame   0x00000150       0xe8 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
+ .debug_frame   0x00000238       0xc0 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
+ .debug_frame   0x000002f8       0x38 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
+ .debug_frame   0x00000330       0x5c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
+ .debug_frame   0x0000038c       0x3c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
+ .debug_frame   0x000003c8       0x38 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
+ .debug_frame   0x00000400       0x38 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+ .debug_frame   0x00000438      0x1e4 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
+ .debug_frame   0x0000061c     0x1024 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
+ .debug_frame   0x00001640       0x2c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
+ .debug_frame   0x0000166c      0x154 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
 
-.debug_loc      0x00000000     0x26dc
+.debug_loc      0x00000000     0x26d0
  .debug_loc     0x00000000       0x70 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBWritePacket.o
  .debug_loc     0x00000070      0x18c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBStandardRequestProcess.o
- .debug_loc     0x000001fc      0x138 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
- .debug_loc     0x00000334       0xf4 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
- .debug_loc     0x00000428       0x2c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
- .debug_loc     0x00000454       0x58 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
- .debug_loc     0x000004ac       0x38 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
- .debug_loc     0x000004e4       0x2c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
- .debug_loc     0x00000510       0x2c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
- .debug_loc     0x0000053c      0x254 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
- .debug_loc     0x00000790     0x1d10 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
- .debug_loc     0x000024a0       0x2c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
- .debug_loc     0x000024cc      0x210 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
+ .debug_loc     0x000001fc      0x12c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBInterruptHandler.o
+ .debug_loc     0x00000328       0xf4 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBGetDescriptor.o
+ .debug_loc     0x0000041c       0x2c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteStatusStage.o
+ .debug_loc     0x00000448       0x58 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteNoDataStage.o
+ .debug_loc     0x000004a0       0x38 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlWriteDataStage.o
+ .debug_loc     0x000004d8       0x2c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadStatusStage.o
+ .debug_loc     0x00000504       0x2c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\USBControlReadDataStage.o
+ .debug_loc     0x00000530      0x254 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbtest120208.o
+ .debug_loc     0x00000784     0x1d10 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\interrupt_handlers.o
+ .debug_loc     0x00002494       0x2c C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\hardware_setup.o
+ .debug_loc     0x000024c0      0x210 C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\DEBUGFIFO.o
 
 .debug_aranges  0x00000000      0x1c0
  .debug_aranges
@@ -671,7 +671,7 @@ OUTPUT(C:\WorkSpace\rxusbtest120229_HIDTEST\rxusbtest120208_HIDTEST\Debug\rxusbt
 
 ==============================================================
 
-Listfile generated by KPIT GNURX [ELF]-v11.03 on Sunday, March 18, 2012, 08:37:21
+Listfile generated by KPIT GNURX [ELF]-v11.03 on Sunday, March 18, 2012, 13:20:49
 
 Build options:
 

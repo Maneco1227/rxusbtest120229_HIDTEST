@@ -314,6 +314,9 @@ void ledOff()
 //
 //
 //
+extern unsigned char *p_pipe2Buf;
+extern unsigned short pipe2BufCnt;
+extern void WriteBulkInPacket(void);
 
 int main(void)
 {
@@ -356,25 +359,15 @@ int main(void)
 	DEBUGFIFO_OutLine("LED ON.");		
 
     while (1) {
-		for(i = 0; i < 0x000FFFFF; i++);
+		unsigned char c[3] = {0x00, 0x40, 0x40};
+		
+		for(i = 0; i < 0x00400000; i++);
 		DEBUGFIFO_OutLine("Loop!");		
 
-		USB0.D0FIFOSEL.BIT.MBW = 0;
-		USB0.D0FIFOSEL.BIT.CURPIPE = 1;
+		p_pipe2Buf = &c[0];
+		pipe2BufCnt = 3;
 
-		while(USB0.D0FIFOCTR.BIT.FRDY == 0){;}
-		DEBUGFIFO_OutLine("FRDY = 1.");		
-
-		USB0.D0FIFO.BYTE.L = 0x00;
-		USB0.D0FIFO.BYTE.L = 0x40;
-		USB0.D0FIFO.BYTE.L = 0x40;
-
-		USB0.PIPE1CTR.BIT.PID = 1;
-		
-		USB0.D0FIFOCTR.BIT.BVAL = 1;
-
-		USB0.BRDYENB.BIT.PIPE1BRDYE = 0;
-
+		USB0.BRDYENB.BIT.PIPE1BRDYE = 1;
     }
   
   	return 0;

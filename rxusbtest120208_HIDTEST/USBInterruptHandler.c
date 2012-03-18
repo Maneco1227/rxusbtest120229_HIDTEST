@@ -245,7 +245,24 @@ void HandleBRDY(void)
 		
 	}
 	
+	//
+	/*Has BULK IN pipe caused this interrupt (pipe1)*/
+	//
+	if((USB0.BRDYSTS.BIT.PIPE1BRDY == 1) && (USB0.BRDYENB.BIT.PIPE1BRDYE == 1))
+	{
+		DEBUGFIFO_OutLine("Pipe1 Interrupt.");
+	
+		/*Clear this bit (write 1 to all other bits)*/
+		USB0.BRDYSTS.BIT.PIPE1BRDY = 0;
 		
+		USB0.PIPE1CTR.BIT.PID = 0;
+		while(USB0.PIPE1CTR.BIT.PBUSY == 1);
+		
+		USB0.PIPE1TRE.BIT.TRENB = 0;
+		USB0.PIPE1TRE.BIT.TRCLR = 1;
+	
+		WriteBulkInPacket();
+	}	
 
 }
 /**********************************************************************
